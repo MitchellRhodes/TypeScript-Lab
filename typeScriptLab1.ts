@@ -1,5 +1,3 @@
-import { monitorEventLoopDelay } from "node:perf_hooks";
-
 interface Mountain {
     name: string;
     height: number;
