@@ -55,7 +55,7 @@ interface Product {
 
 
 
-const productArray: Product[] = [
+const products: Product[] = [
     {
         name: 'Bloodborne',
         price: 19.99
@@ -89,7 +89,7 @@ function calcAverageProductPrice(products: Product[]): number {
     return average;
 };
 
-console.log(calcAverageProductPrice(productArray));
+console.log(calcAverageProductPrice(products));
 
 
 
@@ -97,12 +97,12 @@ console.log(calcAverageProductPrice(productArray));
 
 
 
-interface Inventory extends Product {
+interface InventoryItem extends Product {
     quantity: number;
 };
 
 
-const inventoryArray: Inventory[] = [
+const inventory: InventoryItem[] = [
     {
         name: 'motor',
         price: 10.00,
@@ -123,7 +123,7 @@ const inventoryArray: Inventory[] = [
 ];
 
 
-function calcInventoryValue(inventoryItems: Inventory[]): number {
+function calcInventoryValue(inventoryItems: InventoryItem[]): number {
     let total = 0;
 
     for (let item of inventoryItems) {
@@ -133,4 +133,4 @@ function calcInventoryValue(inventoryItems: Inventory[]): number {
     return total;
 }
 
-console.log(calcInventoryValue(inventoryArray));
+console.log(calcInventoryValue(inventory));

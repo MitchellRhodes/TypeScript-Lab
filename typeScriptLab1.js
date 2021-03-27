@@ -29,7 +29,7 @@ function findNameOfTallestMountain(mountains) {
 ;
 console.log(findNameOfTallestMountain(mountainsArray));
 ;
-var productArray = [
+var products = [
     {
         name: 'Bloodborne',
         price: 19.99
@@ -57,9 +57,9 @@ function calcAverageProductPrice(products) {
     return average;
 }
 ;
-console.log(calcAverageProductPrice(productArray));
+console.log(calcAverageProductPrice(products));
 ;
-var inventoryArray = [
+var inventory = [
     {
         name: 'motor',
         price: 10.00,
@@ -84,4 +84,4 @@ function calcInventoryValue(inventoryItems) {
     }
     return total;
 }
-console.log(calcInventoryValue(inventoryArray));
+console.log(calcInventoryValue(inventory));
