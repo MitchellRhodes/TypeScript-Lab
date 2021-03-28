@@ -97,27 +97,34 @@ console.log(calcAverageProductPrice(products));
 
 
 
-interface InventoryItem extends Product {
+interface InventoryItem {
+    product: Product;
     quantity: number;
 };
 
 
 const inventory: InventoryItem[] = [
     {
-        name: 'motor',
-        price: 10.00,
+        product: {
+            name: 'motor',
+            price: 10.00
+        },
         quantity: 10
     },
 
     {
-        name: 'sensor',
-        price: 12.50,
+        product: {
+            name: 'sensor',
+            price: 12.50
+        },
         quantity: 4
     },
 
     {
-        name: 'LED',
-        price: 1.00,
+        product: {
+            name: 'LED',
+            price: 1.00
+        },
         quantity: 20
     }
 ];
@@ -127,7 +134,7 @@ function calcInventoryValue(inventoryItems: InventoryItem[]): number {
     let total = 0;
 
     for (let item of inventoryItems) {
-        total += item.price * item.quantity
+        total += item.product.price * item.quantity
     }
 
     return total;

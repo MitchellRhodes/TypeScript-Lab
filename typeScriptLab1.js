@@ -61,18 +61,24 @@ console.log(calcAverageProductPrice(products));
 ;
 var inventory = [
     {
-        name: 'motor',
-        price: 10.00,
+        product: {
+            name: 'motor',
+            price: 10.00
+        },
         quantity: 10
     },
     {
-        name: 'sensor',
-        price: 12.50,
+        product: {
+            name: 'sensor',
+            price: 12.50
+        },
         quantity: 4
     },
     {
-        name: 'LED',
-        price: 1.00,
+        product: {
+            name: 'LED',
+            price: 1.00
+        },
         quantity: 20
     }
 ];
@@ -80,7 +86,7 @@ function calcInventoryValue(inventoryItems) {
     var total = 0;
     for (var _i = 0, inventoryItems_1 = inventoryItems; _i < inventoryItems_1.length; _i++) {
         var item = inventoryItems_1[_i];
-        total += item.price * item.quantity;
+        total += item.product.price * item.quantity;
     }
     return total;
 }
